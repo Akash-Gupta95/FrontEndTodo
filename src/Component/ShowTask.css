@@ -1,0 +1,64 @@
+.deleteDiv{
+    color: red;
+    background-color: #ffffff;
+    padding: 0 20px;
+}
+.deleteDiv:hover{
+    box-shadow: 2px 2px 12px grey;
+}
+.list-task ul{
+   display: flex;
+
+   
+}
+.list-task{
+ 
+}
+
+.list-task ul .taskText{
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    padding-right: 5px;
+    color:#ffb703;
+}
+
+.list-task ul li{
+    font-size: 1.2rem;
+    font-weight: 400;
+    
+    color: yellowgreen;
+    background-color: #000;
+    margin-bottom: 0.5rem;
+
+
+}
+.list-task ul li .taskDes{
+    padding-left: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+
+.deleteButton {
+    display: flex;
+    flex-direction: end;
+}
+
+.deleteButton button{
+    
+    background: indigo;
+    border: 0;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: white;
+    padding: 15px 50px;
+    border-radius: 20px;
+    transition: 0.4s ease;
+    margin-bottom: 2rem;
+   
+}
+.deleteButton button:hover{
+    background-color:#bb2124 ;
+    color: white;
+}
+
