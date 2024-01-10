@@ -15,7 +15,7 @@ const Task = () => {
 const handleSubmit= async(e)=>{
         e.preventDefault();
         const addTask = {task , des};
-    const res =  await axios.post("/post" , addTask)
+    const res =  await axios.post("https://todoapp-95zv.onrender.com/post" , addTask)
 
       console.log(res);
 

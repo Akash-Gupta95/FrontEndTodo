@@ -8,7 +8,7 @@ const ShowTask = () => {
 
   useEffect(() => {
     const FatchTask = async () => {
-      const response = await fetch("/get");
+      const response = await fetch("https://todoapp-95zv.onrender.com/get");
       const data = await response.json();
 
       setTaskShow(data);
@@ -23,7 +23,7 @@ const ShowTask = () => {
   const handleDelete = async (e) => {
     let id = e.target.id;
     try {
-      await axios.delete(`/delete/${id}`);
+      await axios.delete(`https://todoapp-95zv.onrender.com/delete/${id}`);
     } catch (error) {
       console.log("delete Error: " + error);
     }
