@@ -27,7 +27,7 @@ const handleSubmit= async(e)=>{
       <form onSubmit={handleSubmit}>
         <div className="mb-3 inputDiv">
           <label htmlFor="AddTask" className="form-label">
-            Add Task
+            Task
           </label>
           <input
             type="text"
