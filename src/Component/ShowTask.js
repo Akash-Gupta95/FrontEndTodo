@@ -11,7 +11,7 @@ const ShowTask = () => {
       const response = await fetch("https://todoapp-95zv.onrender.com/get");
       const data = await response.json();
 
-      setTaskShow(data);
+       await setTaskShow(data);
       forceUpdate();
     };
 
