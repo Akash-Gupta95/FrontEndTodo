@@ -28,6 +28,26 @@ const ShowTask = () => {
       console.log("delete Error: " + error);
     }
   };
+
+
+  // Update Task
+  const handleUpdate = async (e)=>{
+    let id = e.target.id;
+
+    const task = prompt("Enter task")
+    const des = prompt("Enter description")
+    const addTask = {task , des};
+
+    console.log(task)
+    // const li = document.createElement(li);
+
+    try {
+      await axios.put(`https://todoapp-95zv.onrender.com/update/${id}`,addTask);
+    } catch (error) {
+      console.log("Update Error: " + error);
+    }
+  }
+
   let count=1;
 
   return (
@@ -45,6 +65,7 @@ const ShowTask = () => {
                    <span className="taskText">{count+++ '.'}</span> {w.task}
                     <p className="text-white taskDes"> {w.des}</p>
                   </li>
+                  <div className="buttons">
                   <div className="button deleteButton">
                     <button
                       typeof="submit"
@@ -54,6 +75,18 @@ const ShowTask = () => {
                     >
                       Delete
                     </button>
+                  </div>
+
+                  <div className="button deleteButton">
+                    <button
+                      typeof="submit"
+                      id={w._id}
+                      className="btn btn-denger d-flex deleteDiv"
+                      onClick={handleUpdate}
+                    >
+                      Update
+                    </button>
+                  </div>
                   </div>
                 </>
               );
